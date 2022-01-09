@@ -27,7 +27,7 @@ export default async (req, res) => {
 
     case "PUT":
       try {
-        const updatedPost = await LawdPost.findByIdAndUpdate({
+        const updatedPost = await LawdPost.findByIdAndUpdate(id, req.body, {
           new: true,
           runValidators: true,
         });
@@ -40,7 +40,6 @@ export default async (req, res) => {
       } catch (error) {
         res.status(400).json({ success: false });
       }
-
       break;
 
     case "DELETE":
