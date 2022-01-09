@@ -16,6 +16,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  terms: {
+    type: String,
+    default: "agreed",
+  },
 });
 
 module.exports = mongoose.models.user || mongoose.model("user", userSchema);
