@@ -29,7 +29,7 @@ export default async (req, res) => {
       try {
         const updatedPost = await LawdPost.findByIdAndUpdate({
           new: true,
-          runValidator: true,
+          runValidators: true,
         });
 
         if (!updatedPost) {

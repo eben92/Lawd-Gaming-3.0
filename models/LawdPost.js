@@ -48,6 +48,12 @@ const LawdPostSchema = new mongoose.Schema({
   DATA_download_link: {
     type: String,
   },
+
+  status: {
+    type: String,
+    required: true,
+    maxlength: 8,
+  },
 });
 
 module.exports =
