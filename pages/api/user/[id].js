@@ -13,7 +13,7 @@ export default async (req, res) => {
   switch (method) {
     case "GET":
       try {
-        const getUser = await user.findById({ id });
+        const getUser = await user.findById(id);
 
         if (!getUser) {
           res.status(400).json({ success: false });
@@ -45,7 +45,7 @@ export default async (req, res) => {
 
     case "DELETE":
       try {
-        const deleteUser = await user.findByIdAndDelete({ id: id });
+        const deleteUser = await user.deleteOne({ id: id });
 
         if (!deleteUser) {
           res.status(400).json({ success: false });
