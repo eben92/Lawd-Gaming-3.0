@@ -11,9 +11,9 @@ export default async (req, res) => {
     case "GET":
       try {
         const getUser = await user.find({});
-        res.status(200).json({ succes: true, data: getUser });
+        res.status(200).json({ success: true, data: getUser });
       } catch (error) {
-        res.status(400).json({ succes: false });
+        res.status(400).json({ success: false });
       }
       break;
 
@@ -21,14 +21,14 @@ export default async (req, res) => {
       try {
         const postUser = await user.create(req.body);
 
-        res.status(201).json({ succes: true, data: postUser });
+        res.status(201).json({ success: true, data: postUser });
       } catch (error) {
-        res.status(400).json({ succes: false });
+        res.status(400).json({ success: false });
       }
       break;
 
     default:
-      res.status(400).json({ succes: false });
+      res.status(400).json({ success: false });
       break;
   }
 };
