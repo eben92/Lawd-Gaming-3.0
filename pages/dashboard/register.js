@@ -115,7 +115,7 @@ const Login = () => {
                   : null
               }
               label='User Name'
-              placeholder='Enter your name username'
+              placeholder='username'
               name='user_name'
               onChange={handleChange}
             />
