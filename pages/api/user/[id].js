@@ -1,9 +1,9 @@
 import dbConnect from "../../../utils/dbConnection";
-import LawdPost from "../../../models/LawdPost";
+import user from "../../../models/user";
 
 dbConnect();
 
-//eslint-disable-next-line
+// eslint-disable-next-line
 export default async (req, res) => {
   const {
     query: { id },
@@ -13,30 +13,31 @@ export default async (req, res) => {
   switch (method) {
     case "GET":
       try {
-        const post = await LawdPost.findById(id);
+        const getUser = await user.findById(id);
 
-        if (!post) {
+        if (!getUser) {
           res.status(400).json({ success: false });
         }
 
-        res.status(200).json({ success: true, data: post });
+        res.status(200).json({ success: true, data: getUser });
       } catch (error) {
         res.status(400).json({ success: false });
       }
+
       break;
 
     case "PUT":
       try {
-        const updatedPost = await LawdPost.findByIdAndUpdate(id, req.body, {
+        const updateUser = await user.findByIdAndUpdate(id, req.body, {
           new: true,
           runValidators: true,
         });
 
-        if (!updatedPost) {
+        if (!updateUser) {
           res.status(400).json({ success: false });
         }
 
-        res.status(200).json({ success: true, data: updatedPost });
+        res.status(200).json({ success: true, data: updateUser });
       } catch (error) {
         res.status(400).json({ success: false });
       }
@@ -44,9 +45,9 @@ export default async (req, res) => {
 
     case "DELETE":
       try {
-        const deletedPost = await LawdPost.deleteOne({ id: id });
+        const deleteUser = await user.deleteOne({ id: id });
 
-        if (!deletedPost) {
+        if (!deleteUser) {
           res.status(400).json({ success: false });
         }
 
@@ -54,8 +55,6 @@ export default async (req, res) => {
       } catch (error) {
         res.status(400).json({ success: false });
       }
-
-      break;
 
     default:
       res.status(400).json({ success: false });
