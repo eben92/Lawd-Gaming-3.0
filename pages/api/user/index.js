@@ -21,7 +21,7 @@ export default async (req, res) => {
       try {
         const postUser = await user.create(req.body);
 
-        res.status(201).json({ succes: true, data: postUsers });
+        res.status(201).json({ succes: true, data: postUser });
       } catch (error) {
         res.status(400).json({ succes: false });
       }
