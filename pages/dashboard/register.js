@@ -167,6 +167,7 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import validator from "../../utils/valid";
 import fetch from "isomorphic-unfetch";
 import { Button, Form, Loader, Checkbox } from "semantic-ui-react";
 import { useRouter } from "next/router";
@@ -185,6 +186,11 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const errMsg = validator(name, email, password, cf_password);
+    if (errMsg) {
+      console.log(errMsg);
+    }
 
     console.log(userData);
   };
