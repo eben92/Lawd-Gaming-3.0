@@ -194,6 +194,7 @@ const Register = () => {
     }
 
     console.log(userData);
+    dispatch({ type: "NOTIFY", payload: { success: "OK" } });
   };
 
   return (
@@ -289,7 +290,7 @@ const Register = () => {
         </div>
       </main>
 
-      <Toast />
+      {/* <Toast /> */}
     </div>
   );
 };
