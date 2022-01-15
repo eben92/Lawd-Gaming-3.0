@@ -171,6 +171,7 @@ import validator from "../../utils/valid";
 import fetch from "isomorphic-unfetch";
 import { Button, Form, Loader, Checkbox } from "semantic-ui-react";
 import { useRouter } from "next/router";
+import Toast from "../../components/toast/toast";
 
 import dashboardStyles from "../../styles/dashboard/Index.module.css";
 
@@ -287,6 +288,8 @@ const Register = () => {
           </Form>
         </div>
       </main>
+
+      <Toast />
     </div>
   );
 };
