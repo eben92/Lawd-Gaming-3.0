@@ -99,9 +99,7 @@ const Login = () => {
             <a>Sign In</a>
           </Link>
         </div>
-        {/* {isSubmitting ? (
-          <Loader active inline='centered' />
-        ) : ( */}
+
         <div className='form'>
           <Form onSubmit={handleSubmit} loading={isSubmitting}>
             <Form.Input
@@ -159,11 +157,6 @@ const Login = () => {
             <Button type='submit'>Create</Button>
           </Form>
         </div>
-        {/* )} */}
-        {/* <Form loading>
-          <Form.Input label='Email' placeholder='joe@schmoe.com' />
-          <Button>Submit</Button>
-        </Form> */}
       </main>
     </div>
   );
