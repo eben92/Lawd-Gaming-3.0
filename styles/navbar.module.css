@@ -1,0 +1,16 @@
+.navbarContainer {
+  position: fixed;
+  left: 50%;
+  /* top: 50%; */
+  transform: translate(-50%, -50%);
+  bottom: 0;
+  border-radius: 10px;
+}
+
+.navLink {
+  font-size: 2rem;
+}
+
+.routeName {
+  font-size: 12px;
+}

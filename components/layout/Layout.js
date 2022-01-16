@@ -1,9 +1,10 @@
 import React from "react";
-import Notify from "../Notify/notify";
+import NavBar from "../navBar/NavBar";
+
 const Layout = ({ children }) => {
   return (
     <div>
-      <Notify />
+      <NavBar />
       {children}
     </div>
   );
