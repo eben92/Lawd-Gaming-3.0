@@ -10,8 +10,22 @@ const Notify = () => {
   return (
     <>
       {notify.loading && <Loading />}
-      {notify.error && <Toast />}
-      {notify.success && <Toast />}
+      {notify.error && (
+        <Toast
+          msg={notify.error}
+          title={"error"}
+          bgColor={"bg-red-600"}
+          handleShow={() => dispatch({ type: "NOTIFY", payload: {} })}
+        />
+      )}
+      {notify.success && (
+        <Toast
+          msg={notify.success}
+          title={"registered successfully"}
+          bgColor={"bg-green-500"}
+          handleShow={() => dispatch({ type: "NOTIFY", payload: {} })}
+        />
+      )}
     </>
   );
 };

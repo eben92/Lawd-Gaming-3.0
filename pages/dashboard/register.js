@@ -190,6 +190,8 @@ const Register = () => {
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
     setUserData({ ...userData, [name]: value });
+
+    dispatch({ type: "NOTIFY", payload: {} });
   };
 
   const handleSubmit = (e) => {
