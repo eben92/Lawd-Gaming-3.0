@@ -165,9 +165,11 @@
 // export default Login;
 
 import Head from "next/head";
-import { useState, useEffect } from "react";
+import { useState, useContext, useEffect } from "react";
 import Link from "next/link";
+
 import validator from "../../utils/valid";
+import { DataContext } from "../../store/GlobalState";
 import fetch from "isomorphic-unfetch";
 import { Button, Form, Loader, Checkbox } from "semantic-ui-react";
 import { useRouter } from "next/router";
@@ -180,6 +182,11 @@ const Register = () => {
   const [userData, setUserData] = useState(initialState);
   const { name, email, password, cf_password } = userData;
 
+  const [state, dispatch] = useContext(DataContext);
+  // const { auth } = state;
+
+  const router = useRouter();
+
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
     setUserData({ ...userData, [name]: value });
@@ -189,12 +196,10 @@ const Register = () => {
     e.preventDefault();
 
     const errMsg = validator(name, email, password, cf_password);
-    if (errMsg) {
-      console.log(errMsg);
-    }
+    if (errMsg) return dispatch({ type: "NOTIFY", payload: { error: errMsg } });
 
-    console.log(userData);
     dispatch({ type: "NOTIFY", payload: { success: "OK" } });
+    console.log(userData);
   };
 
   return (
