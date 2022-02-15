@@ -36,12 +36,26 @@ export default function Home() {
               alt='new state'
               className={style.home_img}
             />
-            <div className={style.img_btm}>
-              {/* game profile */}
-
-              {/* text */}
-
+            <div className={`p-3  ${style.img_btm}`}>
+              <div className='  flex items-center'>
+                {/* game profile */}
+                <div className='pr-3 flex items-center'>
+                  <img
+                    src='pubg_new_state.jpg'
+                    alt='new state'
+                    className={style.game_dp}
+                  />
+                </div>
+                {/* text */}
+                <div>
+                  <h5 className={style.game_title}>Pubg New State</h5>
+                  <p className={style.game_status}>Extreme Battle Royale</p>
+                </div>
+              </div>
               {/* getbtn */}
+              <Link href='/get'>
+                <a className={style.get_btn}>GET</a>
+              </Link>
             </div>
           </div>
         </section>
