@@ -18,13 +18,30 @@
   margin-top: 5px;
 }
 
-.image_container {
+/* .image_container {
   background: rgb(23, 23, 23);
-  height: 37vh;
+  height: 30vh;
   border-radius: 10px;
-}
+} */
 
 .home_img {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+  object-fit: contain;
+}
+
+.login {
+  border: 1px solid #fff;
+  padding: 3px 25px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-left: none;
+}
+
+.img_btm {
+  background: rgb(23, 23, 23);
+  height: 40px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: 100%;
 }

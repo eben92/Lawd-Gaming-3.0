@@ -93,3 +93,11 @@ a {
   z-index: 10000;
   font-weight: 600;
 }
+
+@media (min-width: 800px) {
+  *,
+  html,
+  body {
+    display: none !important;
+  }
+}
