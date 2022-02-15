@@ -23,7 +23,7 @@ export default function Home() {
           <div className='flex items-center justify-between'>
             <h3 className={style.today}>Today</h3>
             {/* user here and flex */}
-            <Link href='/login'>
+            <Link href='/user/login'>
               <a className={`text-white ${style.login}`}>Login</a>
             </Link>
           </div>
