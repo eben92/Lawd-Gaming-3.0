@@ -12,6 +12,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: "Fira Sans", sans-serif;
+  overflow-x: hidden !important;
 }
 
 h1,
@@ -94,6 +95,13 @@ a {
   font-weight: 600;
 }
 
+hr {
+  width: 88%;
+  float: right;
+  border: none;
+  height: 1px !important;
+  background: rgb(52, 52, 52);
+}
 @media (min-width: 800px) {
   *,
   html,

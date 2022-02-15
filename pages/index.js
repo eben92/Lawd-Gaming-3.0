@@ -59,6 +59,140 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* top games treding right now */}
+        <section className={`${style.trending_Section} p-3`}>
+          <div>
+            <h2 className={style.trending_title}>NOW TRENDNG</h2>
+            <h1 className={style.trending_top_games}>Top Games Right Now</h1>
+          </div>
+
+          {/* games */}
+          <div>
+            <div className={`my-3 ${style.img_btm}`}>
+              <div className='  flex items-center'>
+                {/* game profile */}
+                <div className='pr-3 flex items-center'>
+                  <img
+                    src='pubg_new_state.jpg'
+                    alt='new state'
+                    className={style.game_dp}
+                  />
+                </div>
+                {/* text */}
+                <div>
+                  <h5 className={style.game_title}>Pubg New State</h5>
+                  <p className={style.game_status}>Extreme Battle Royale</p>
+                </div>
+              </div>
+              {/* getbtn */}
+              <Link href='/get'>
+                <a className={style.get_btn}>DOWNLOAD</a>
+              </Link>
+            </div>
+            <hr />
+          </div>
+
+          <div>
+            <div className={`my-3 ${style.img_btm}`}>
+              <div className='  flex items-center'>
+                {/* game profile */}
+                <div className='pr-3 flex items-center'>
+                  <img
+                    src='pubg_new_state.jpg'
+                    alt='new state'
+                    className={style.game_dp}
+                  />
+                </div>
+                {/* text */}
+                <div>
+                  <h5 className={style.game_title}>Pubg New State</h5>
+                  <p className={style.game_status}>Extreme Battle Royale</p>
+                </div>
+              </div>
+              {/* getbtn */}
+              <Link href='/get'>
+                <a className={style.get_btn}>DOWNLOAD</a>
+              </Link>
+            </div>
+            <hr />
+          </div>
+
+          <div>
+            <div className={`my-3 ${style.img_btm}`}>
+              <div className='  flex items-center'>
+                {/* game profile */}
+                <div className='pr-3 flex items-center'>
+                  <img
+                    src='pubg_new_state.jpg'
+                    alt='new state'
+                    className={style.game_dp}
+                  />
+                </div>
+                {/* text */}
+                <div>
+                  <h5 className={style.game_title}>Pubg New State</h5>
+                  <p className={style.game_status}>Extreme Battle Royale</p>
+                </div>
+              </div>
+              {/* getbtn */}
+              <Link href='/get'>
+                <a className={style.get_btn}>DOWNLOAD</a>
+              </Link>
+            </div>
+            <hr />
+          </div>
+
+          <div>
+            <div className={`my-3 ${style.img_btm}`}>
+              <div className='  flex items-center'>
+                {/* game profile */}
+                <div className='pr-3 flex items-center'>
+                  <img
+                    src='pubg_new_state.jpg'
+                    alt='new state'
+                    className={style.game_dp}
+                  />
+                </div>
+                {/* text */}
+                <div>
+                  <h5 className={style.game_title}>Pubg New State</h5>
+                  <p className={style.game_status}>Extreme Battle Royale</p>
+                </div>
+              </div>
+              {/* getbtn */}
+              <Link href='/get'>
+                <a className={style.get_btn}>DOWNLOAD</a>
+              </Link>
+            </div>
+            <hr />
+          </div>
+
+          <div>
+            <div className={`my-3 ${style.img_btm}`}>
+              <div className='  flex items-center'>
+                {/* game profile */}
+                <div className='pr-3 flex items-center'>
+                  <img
+                    src='pubg_new_state.jpg'
+                    alt='new state'
+                    className={style.game_dp}
+                  />
+                </div>
+                {/* text */}
+                <div>
+                  <h5 className={style.game_title}>Pubg New State</h5>
+                  <p className={style.game_status}>Extreme Battle Royale</p>
+                </div>
+              </div>
+              {/* getbtn */}
+              <Link href='/get'>
+                <a className={style.get_btn}>DOWNLOAD</a>
+              </Link>
+            </div>
+            <hr />
+          </div>
+        </section>
       </main>
 
       <footer className={""}></footer>
